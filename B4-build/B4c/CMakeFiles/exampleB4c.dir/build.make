@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4
+CMAKE_SOURCE_DIR = /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build
+CMAKE_BINARY_DIR = /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build
 
 # Include any dependencies generated for this target.
 include B4c/CMakeFiles/exampleB4c.dir/depend.make
@@ -58,17 +58,17 @@ include B4c/CMakeFiles/exampleB4c.dir/progress.make
 include B4c/CMakeFiles/exampleB4c.dir/flags.make
 
 B4c/CMakeFiles/exampleB4c.dir/exampleB4c.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/exampleB4c.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/exampleB4c.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/exampleB4c.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/exampleB4c.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/exampleB4c.cc
+B4c/CMakeFiles/exampleB4c.dir/exampleB4c.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/exampleB4c.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/exampleB4c.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/exampleB4c.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/exampleB4c.cc
 
 B4c/CMakeFiles/exampleB4c.dir/exampleB4c.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/exampleB4c.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/exampleB4c.cc > CMakeFiles/exampleB4c.dir/exampleB4c.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/exampleB4c.cc > CMakeFiles/exampleB4c.dir/exampleB4c.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/exampleB4c.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/exampleB4c.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/exampleB4c.cc -o CMakeFiles/exampleB4c.dir/exampleB4c.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/exampleB4c.cc -o CMakeFiles/exampleB4c.dir/exampleB4c.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/exampleB4c.cc.o.requires:
 
@@ -82,17 +82,17 @@ B4c/CMakeFiles/exampleB4c.dir/exampleB4c.cc.o.provides.build: B4c/CMakeFiles/exa
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/PCAToy.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/PCAToy.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/PCAToy.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/PCAToy.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/PCAToy.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/PCAToy.cc
+B4c/CMakeFiles/exampleB4c.dir/src/PCAToy.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/PCAToy.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/PCAToy.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/PCAToy.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/PCAToy.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/PCAToy.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/PCAToy.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/PCAToy.cc > CMakeFiles/exampleB4c.dir/src/PCAToy.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/PCAToy.cc > CMakeFiles/exampleB4c.dir/src/PCAToy.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/PCAToy.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/PCAToy.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/PCAToy.cc -o CMakeFiles/exampleB4c.dir/src/PCAToy.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/PCAToy.cc -o CMakeFiles/exampleB4c.dir/src/PCAToy.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/PCAToy.cc.o.requires:
 
@@ -106,17 +106,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/PCAToy.cc.o.provides.build: B4c/CMakeFiles/exa
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/TROOTAnalysis.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/TROOTAnalysis.cc
+B4c/CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/TROOTAnalysis.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/TROOTAnalysis.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/TROOTAnalysis.cc > CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/TROOTAnalysis.cc > CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/TROOTAnalysis.cc -o CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/TROOTAnalysis.cc -o CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.o.requires:
 
@@ -130,17 +130,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/TROOTAnalysis.cc.o.provides.build: B4c/CMakeFi
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4RunAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4RunAction.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4RunAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4RunAction.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4RunAction.cc > CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4RunAction.cc > CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4RunAction.cc -o CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4RunAction.cc -o CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.o.requires:
 
@@ -154,17 +154,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/B4RunAction.cc.o.provides.build: B4c/CMakeFile
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cDummySD.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cDummySD.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cDummySD.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cDummySD.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cDummySD.cc > CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cDummySD.cc > CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cDummySD.cc -o CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cDummySD.cc -o CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.o.requires:
 
@@ -178,17 +178,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/B4cDummySD.cc.o.provides.build: B4c/CMakeFiles
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/EResShowerProf.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/EResShowerProf.cc
+B4c/CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/EResShowerProf.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/EResShowerProf.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/EResShowerProf.cc > CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/EResShowerProf.cc > CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/EResShowerProf.cc -o CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/EResShowerProf.cc -o CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.o.requires:
 
@@ -202,17 +202,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/EResShowerProf.cc.o.provides.build: B4c/CMakeF
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cTrackingAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cTrackingAction.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cTrackingAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cTrackingAction.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cTrackingAction.cc > CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cTrackingAction.cc > CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cTrackingAction.cc -o CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cTrackingAction.cc -o CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.o.requires:
 
@@ -226,17 +226,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackingAction.cc.o.provides.build: B4c/CMa
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cTrackInformation.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cTrackInformation.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cTrackInformation.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cTrackInformation.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cTrackInformation.cc > CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cTrackInformation.cc > CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cTrackInformation.cc -o CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cTrackInformation.cc -o CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.o.requires:
 
@@ -250,17 +250,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/B4cTrackInformation.cc.o.provides.build: B4c/C
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4ROOTEvent.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4ROOTEvent.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4ROOTEvent.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4ROOTEvent.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4ROOTEvent.cc > CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4ROOTEvent.cc > CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4ROOTEvent.cc -o CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4ROOTEvent.cc -o CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.o.requires:
 
@@ -274,17 +274,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/B4ROOTEvent.cc.o.provides.build: B4c/CMakeFile
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cDetectorConstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cDetectorConstruction.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cDetectorConstruction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cDetectorConstruction.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cDetectorConstruction.cc > CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cDetectorConstruction.cc > CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cDetectorConstruction.cc -o CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cDetectorConstruction.cc -o CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.o.requires:
 
@@ -298,17 +298,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/B4cDetectorConstruction.cc.o.provides.build: B
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cReadoutGeometry.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cReadoutGeometry.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cReadoutGeometry.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cReadoutGeometry.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cReadoutGeometry.cc > CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cReadoutGeometry.cc > CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cReadoutGeometry.cc -o CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cReadoutGeometry.cc -o CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.o.requires:
 
@@ -322,17 +322,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/B4cReadoutGeometry.cc.o.provides.build: B4c/CM
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/Minimizer.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/Minimizer.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/Minimizer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/Minimizer.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/Minimizer.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/Minimizer.cc
+B4c/CMakeFiles/exampleB4c.dir/src/Minimizer.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/Minimizer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/Minimizer.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/Minimizer.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/Minimizer.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/Minimizer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/Minimizer.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/Minimizer.cc > CMakeFiles/exampleB4c.dir/src/Minimizer.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/Minimizer.cc > CMakeFiles/exampleB4c.dir/src/Minimizer.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/Minimizer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/Minimizer.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/Minimizer.cc -o CMakeFiles/exampleB4c.dir/src/Minimizer.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/Minimizer.cc -o CMakeFiles/exampleB4c.dir/src/Minimizer.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/Minimizer.cc.o.requires:
 
@@ -346,17 +346,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/Minimizer.cc.o.provides.build: B4c/CMakeFiles/
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/CalcAngularRes.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/CalcAngularRes.cc
+B4c/CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/CalcAngularRes.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/CalcAngularRes.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/CalcAngularRes.cc > CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/CalcAngularRes.cc > CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/CalcAngularRes.cc -o CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/CalcAngularRes.cc -o CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.o.requires:
 
@@ -370,17 +370,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/CalcAngularRes.cc.o.provides.build: B4c/CMakeF
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/RootClasses_dict.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/RootClasses_dict.cc
+B4c/CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/RootClasses_dict.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/RootClasses_dict.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/RootClasses_dict.cc > CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/RootClasses_dict.cc > CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/RootClasses_dict.cc -o CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/RootClasses_dict.cc -o CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.o.requires:
 
@@ -394,17 +394,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/RootClasses_dict.cc.o.provides.build: B4c/CMak
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cPionManager.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cPionManager.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cPionManager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cPionManager.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cPionManager.cc > CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cPionManager.cc > CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cPionManager.cc -o CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cPionManager.cc -o CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.o.requires:
 
@@ -418,17 +418,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/B4cPionManager.cc.o.provides.build: B4c/CMakeF
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/PlotQuantiles.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/PlotQuantiles.cc
+B4c/CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/PlotQuantiles.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/PlotQuantiles.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/PlotQuantiles.cc > CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/PlotQuantiles.cc > CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/PlotQuantiles.cc -o CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/PlotQuantiles.cc -o CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.o.requires:
 
@@ -442,17 +442,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/PlotQuantiles.cc.o.provides.build: B4c/CMakeFi
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cEventAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cEventAction.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cEventAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cEventAction.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cEventAction.cc > CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cEventAction.cc > CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cEventAction.cc -o CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cEventAction.cc -o CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.o.requires:
 
@@ -466,17 +466,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/B4cEventAction.cc.o.provides.build: B4c/CMakeF
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cDetParams.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cDetParams.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cDetParams.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cDetParams.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cDetParams.cc > CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cDetParams.cc > CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cDetParams.cc -o CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cDetParams.cc -o CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.o.requires:
 
@@ -490,17 +490,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/B4cDetParams.cc.o.provides.build: B4c/CMakeFil
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4PrimaryGeneratorAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4PrimaryGeneratorAction.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4PrimaryGeneratorAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4PrimaryGeneratorAction.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4PrimaryGeneratorAction.cc > CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4PrimaryGeneratorAction.cc > CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4PrimaryGeneratorAction.cc -o CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4PrimaryGeneratorAction.cc -o CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.o.requires:
 
@@ -514,17 +514,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/B4PrimaryGeneratorAction.cc.o.provides.build: 
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cCalorHit.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cCalorHit.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cCalorHit.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cCalorHit.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cCalorHit.cc > CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cCalorHit.cc > CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cCalorHit.cc -o CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cCalorHit.cc -o CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.o.requires:
 
@@ -538,17 +538,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorHit.cc.o.provides.build: B4c/CMakeFile
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cCalorimeterSD.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cCalorimeterSD.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cCalorimeterSD.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cCalorimeterSD.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cCalorimeterSD.cc > CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cCalorimeterSD.cc > CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cCalorimeterSD.cc -o CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cCalorimeterSD.cc -o CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.o.requires:
 
@@ -562,17 +562,17 @@ B4c/CMakeFiles/exampleB4c.dir/src/B4cCalorimeterSD.cc.o.provides.build: B4c/CMak
 
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.o: B4c/CMakeFiles/exampleB4c.dir/flags.make
-B4c/CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cActionInitialization.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.o"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cActionInitialization.cc
+B4c/CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.o: /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cActionInitialization.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object B4c/CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.o"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.o -c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cActionInitialization.cc
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.i"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cActionInitialization.cc > CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.i
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cActionInitialization.cc > CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.i
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.s"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c/src/B4cActionInitialization.cc -o CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.s
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c/src/B4cActionInitialization.cc -o CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.s
 
 B4c/CMakeFiles/exampleB4c.dir/src/B4cActionInitialization.cc.o.requires:
 
@@ -696,8 +696,8 @@ B4c/exampleB4c: /remote/pcilc7/software/Geant4_10.3.3/geant4.10.03.p03-install/l
 B4c/exampleB4c: /remote/pcilc7/software/Geant4_10.3.3/geant4.10.03.p03-install/lib/libG4global.so
 B4c/exampleB4c: /remote/pcilc7/software/Geant4_10.3.3/geant4.10.03.p03-install/lib/libG4clhep.so
 B4c/exampleB4c: B4c/CMakeFiles/exampleB4c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable exampleB4c"
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/exampleB4c.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable exampleB4c"
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/exampleB4c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 B4c/CMakeFiles/exampleB4c.dir/build: B4c/exampleB4c
@@ -730,10 +730,10 @@ B4c/CMakeFiles/exampleB4c.dir/requires: B4c/CMakeFiles/exampleB4c.dir/src/B4cAct
 .PHONY : B4c/CMakeFiles/exampleB4c.dir/requires
 
 B4c/CMakeFiles/exampleB4c.dir/clean:
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c && $(CMAKE_COMMAND) -P CMakeFiles/exampleB4c.dir/cmake_clean.cmake
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c && $(CMAKE_COMMAND) -P CMakeFiles/exampleB4c.dir/cmake_clean.cmake
 .PHONY : B4c/CMakeFiles/exampleB4c.dir/clean
 
 B4c/CMakeFiles/exampleB4c.dir/depend:
-	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4 /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4/B4c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithPressureVessel/B4-build/B4c/CMakeFiles/exampleB4c.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4 /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4/B4c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c /home/iwsatlas1/emberger/Geant4/Current/ForwardEcalWithAirGap/B4-build/B4c/CMakeFiles/exampleB4c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : B4c/CMakeFiles/exampleB4c.dir/depend
 
