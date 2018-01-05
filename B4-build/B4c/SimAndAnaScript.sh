@@ -21,7 +21,7 @@ XAngIncrement=0.
 AngIiterations=1
 
 
-foldername=AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_20mmSteelVessel #folder containing .root files
+foldername=AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_20mmSteelVessel_noDigitizing #folder containing .root files
 
 #  mkdir ~/Geant4/Data/ForwardEcalWithAirGap/AngularResolution_OutlierRejection/$foldername
 #
@@ -143,7 +143,7 @@ foldername=AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_20
 
      # mkdir $AnaPath
 
-     ./Analysis 0.15 1000 $FilePath $ANALYSIS
+     ./Analysis 0.0 1000 $FilePath $ANALYSIS
 
  done
 
@@ -153,7 +153,7 @@ foldername=AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_20
 
 
 
- foldername=AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_14mmTitanVessel #folder containing .root files
+ foldername=AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_14mmTitanVessel_noDigitizing #folder containing .root files
 
 
 
@@ -177,7 +177,7 @@ foldername=AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_20
 
      # mkdir $AnaPath
 
-     ./Analysis 0.15 1000 $FilePath $ANALYSIS
+     ./Analysis 0.0 1000 $FilePath $ANALYSIS
 
  done
 

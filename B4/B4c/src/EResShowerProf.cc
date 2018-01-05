@@ -58,11 +58,11 @@ void EResShowerProf::EResAndProfile(Double_t cut, std::string pth){
                         EcalTree->GetEntry(j);                   //grab event from tree
                         eventcounter+=Cevent->NHits();
                         for(Int_t l=0; l<Cevent->NHits(); l++) {
-                                
-                                Double_t smear=rndGen->Gaus(mean, sig);
 
-                                Double_t smearedenergy=Cevent->Hit(l)->EnergyDeposit()+smear;
-                                Cevent->Hit(l)->SetEnergyDeposit(smearedenergy);
+                                // Double_t smear=rndGen->Gaus(mean, sig);
+                                //
+                                // Double_t smearedenergy=Cevent->Hit(l)->EnergyDeposit()+smear;
+                                // Cevent->Hit(l)->SetEnergyDeposit(smearedenergy);
 
                                 if(Cevent->Hit(l)->EnergyDeposit() < c) {
                                         coutcounter++;
@@ -166,12 +166,12 @@ void EResShowerProf::EResAndProfile(Double_t cut, std::string pth){
                 EcalTree->GetEntry(j);             //grab event from tree
                 eventcounter+=Cevent->NHits();
                 for(Int_t l=0; l<Cevent->NHits(); l++) {
-
-
-                        Double_t smear=rndGen->Gaus(mean, sig);
-
-                        Double_t smearedenergy=Cevent->Hit(l)->EnergyDeposit()+smear;
-                        Cevent->Hit(l)->SetEnergyDeposit(smearedenergy);
+                        //
+                        //
+                        // Double_t smear=rndGen->Gaus(mean, sig);
+                        //
+                        // Double_t smearedenergy=Cevent->Hit(l)->EnergyDeposit()+smear;
+                        // Cevent->Hit(l)->SetEnergyDeposit(smearedenergy);
 
 
                         if(Cevent->Hit(l)->EnergyDeposit() < c) {

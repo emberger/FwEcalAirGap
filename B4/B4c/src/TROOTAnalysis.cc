@@ -142,9 +142,9 @@ Int_t TROOTAnalysis::GetNofEntries(){
 void TROOTAnalysis::ApplySmearingAndCut(Double_t c, Double_t mean, Double_t sig){
 
         for(Int_t i; i<Cevent->NHits(); i++) {
-                Double_t smear=rndGen->Gaus(mean, sig);
-                Double_t smearedenergy=Cevent->Hit(i)->EnergyDeposit()+smear;
-                Cevent->Hit(i)->SetEnergyDeposit(smearedenergy);
+                // Double_t smear=rndGen->Gaus(mean, sig);
+                // Double_t smearedenergy=Cevent->Hit(i)->EnergyDeposit()+smear;
+                // Cevent->Hit(i)->SetEnergyDeposit(smearedenergy);
 
 
                 if(Cevent->Hit(i)->EnergyDeposit() < c) {
