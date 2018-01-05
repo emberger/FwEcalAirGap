@@ -225,7 +225,7 @@ G4VPhysicalVolume* MyRO::Build(){
 								if(GetInst().GetInnerAbsFirst()) {
 
 																new G4PVPlacement(0,
-																																		G4ThreeVector(0., 0., GetInst().GetInnerabsoThickness()/2 ),
+																																		G4ThreeVector(0., 0., GetInst().GetInnerabsoThickness()/2-GetInst().GetairgapThickness()/2 ),
 																																		InnerGapLV,
 																																		"Gap",
 																																		ROInnerlayerLV,
@@ -237,7 +237,7 @@ G4VPhysicalVolume* MyRO::Build(){
 								}
 								else{
 																new G4PVPlacement(0,
-																																		G4ThreeVector(0., 0., -GetInst().GetInnerabsoThickness()/2 ),
+																																		G4ThreeVector(0., 0.,-GetInst().GetInnerabsoThickness()/2-GetInst().GetairgapThickness()/2 ),
 																																		InnerGapLV,
 																																		"InnerGap",
 																																		ROInnerlayerLV,
@@ -321,7 +321,7 @@ G4VPhysicalVolume* MyRO::Build(){
 								if(GetInst().GetOuterAbsFirst()) {
 
 																new G4PVPlacement(0,
-																																		G4ThreeVector(0., 0., GetInst().GetOuterabsoThickness()/2 ),
+																																		G4ThreeVector(0., 0., GetInst().GetOuterabsoThickness()/2 -GetInst().GetairgapThickness()/2),
 																																		OuterGapLV,
 																																		"Gap",
 																																		ROOuterlayerLV,
@@ -333,7 +333,7 @@ G4VPhysicalVolume* MyRO::Build(){
 								}
 								else{
 																new G4PVPlacement(0,
-																																		G4ThreeVector(0., 0., -GetInst().GetOuterabsoThickness()/2 ),
+																																		G4ThreeVector(0., 0., -GetInst().GetOuterabsoThickness()/2 -GetInst().GetairgapThickness()/2),
 																																		OuterGapLV,
 																																		"OuterGap",
 																																		ROOuterlayerLV,

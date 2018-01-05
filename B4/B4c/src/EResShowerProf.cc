@@ -52,13 +52,13 @@ void EResShowerProf::EResAndProfile(Double_t cut, std::string pth){
 
 
                 for(Int_t j=0; j<nofEvents; j++) {
-                  Double_t newGapEnergy=0;
+                        Double_t newGapEnergy=0;
 
 
                         EcalTree->GetEntry(j);                   //grab event from tree
                         eventcounter+=Cevent->NHits();
                         for(Int_t l=0; l<Cevent->NHits(); l++) {
-
+                                
                                 Double_t smear=rndGen->Gaus(mean, sig);
 
                                 Double_t smearedenergy=Cevent->Hit(l)->EnergyDeposit()+smear;
@@ -162,7 +162,7 @@ void EResShowerProf::EResAndProfile(Double_t cut, std::string pth){
 
 
         for(Int_t j=0; j<nofEvents; j++) {
-                  Double_t newGapEnergy=0;
+                Double_t newGapEnergy=0;
                 EcalTree->GetEntry(j);             //grab event from tree
                 eventcounter+=Cevent->NHits();
                 for(Int_t l=0; l<Cevent->NHits(); l++) {
