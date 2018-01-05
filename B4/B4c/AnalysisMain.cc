@@ -52,7 +52,7 @@ int main(int argc, char * argv[]) {
         //std::cout<<"hello"<<std::endl;
         TROOTAnalysis A(ch1,distance);
 
-        A.SetPath(argv[4]);
+        //A.SetPath(argv[4]);
 
         Double_t entries=A.GetNofEntries();
 
@@ -79,7 +79,7 @@ int main(int argc, char * argv[]) {
 
 
 
-        //entries=100000;
+        //entries=10000;
         for(Int_t i=0; i<entries; i++) {
 
                 A.EcalTree->GetEntry(i);
@@ -144,7 +144,7 @@ int main(int argc, char * argv[]) {
         // //hz->Fit(f1, "L", "", -1,1);
         // hz->Draw();
 
-        A.DrawHists();
+        //A.DrawHists();
 
         // end = std::chrono::steady_clock::now();
         // std::cout << "Computing took "

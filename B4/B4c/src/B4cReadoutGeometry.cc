@@ -40,7 +40,7 @@ MyRO::~MyRO(){
 G4VPhysicalVolume* MyRO::Build(){
 
 								// Geometry parameters also for Detector Construction
-								GetInst().SetfNofInnerLayers(40);  // in #
+								GetInst().SetfNofInnerLayers(30);  // in #
 								GetInst().SetfNofOuterLayers(50);
 
 								GetInst().SetcalorSizeXY(2000); // in mm
@@ -51,18 +51,20 @@ G4VPhysicalVolume* MyRO::Build(){
 								GetInst().SetOutertileLenX(20);         // in mm
 								GetInst().SetOutertileLenY(20);         // in mm
 
-								GetInst().SetInnerabsoThickness(2);     // in mm
+								GetInst().SetInnerabsoThickness(1);     // in mm
 								GetInst().SetInnergapThickness(5);      // in mm
 
-								GetInst().SetOuterabsoThickness(2); // in mm
+								GetInst().SetOuterabsoThickness(1); // in mm
 								GetInst().SetOutergapThickness(5); // in mm
 
 								GetInst().SetPvesselThickness(20); //in mm
 
+								GetInst().SetairgapThickness(1); //in mm
+
 								GetInst().SetInnerAbsFirst(true);    // true if structure should be |Abso-Gap|Abso-Gap|... false if structure should be |Gap-Abso|Gap-Abso|...
 								GetInst().SetOuterAbsFirst(false);
 
-								GetInst().SetWorldMult(10.);//in mm
+								GetInst().SetWorldMult(10.);
 								GetInst().InitDet(); // dont forget!!!
 
 

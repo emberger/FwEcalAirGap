@@ -121,6 +121,7 @@ Double_t nofOuterLayers;
 
 Double_t calsizeXY;
 Double_t PVesselThickness;
+Double_t airgapThickness;
 
 Double_t histsizeX;
 Double_t histsizeY;

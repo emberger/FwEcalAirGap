@@ -338,30 +338,7 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
                 false,                     // no boolean operation
                 1,                         // copy number
                 fCheckOverlaps);        // checking overlaps
-        //
-        //AirGap
-        //
 
-        // auto AirGapS
-        //         = new G4Box("AirGap", // its name
-        //                     GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetairgapThickness()/2); // its size
-        //
-        // auto AirGapLV
-        //         = new G4LogicalVolume(
-        //         AirGapS,         // its solid
-        //         airMaterial, // its material
-        //         "AirGapLV");         // its name
-        //
-        //
-        // new G4PVPlacement(
-        //         0,                 // no rotation
-        //         G4ThreeVector(0., 0., -(GetInst().GetInnergapThickness()/2)),         // its position
-        //         AirGapLV,         // its logical volume
-        //         "AirGap",            // its name
-        //         AirGapLV,           // its mother  volume
-        //         false,             // no boolean operation
-        //         0,                 // copy number
-        //         fCheckOverlaps);         // checking overlaps
 
 
 
@@ -390,6 +367,30 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
                 GetInst().GetfNofInnerLayers(),         // number of replica
                 GetInst().GetInnerlayerThickness());   // witdth of replica
 
+        //
+        //AirGap
+        //
+
+        auto AirGapS
+                = new G4Box("AirGap",         // its name
+                            GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetairgapThickness()/2);         // its size
+
+        auto AirGapLV
+                = new G4LogicalVolume(
+                AirGapS,                 // its solid
+                airMaterial,         // its material
+                "AirGapLV");                 // its name
+
+
+        new G4PVPlacement(
+                0,                         // no rotation
+                G4ThreeVector(0., 0., (GetInst().GetInnerlayerThickness()/2)-GetInst().GetairgapThickness()/2),                 // its position
+                AirGapLV,                 // its logical volume
+                "InnerAirGap",                    // its name
+                InnerlayerLV,                   // its mother  volume
+                false,                     // no boolean operation
+                0,                         // copy number
+                fCheckOverlaps);                 // checking overlaps
 
 
         //
@@ -408,7 +409,7 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
         if(GetInst().GetInnerAbsFirst()) {
                 new G4PVPlacement(
                         0,         // no rotation
-                        G4ThreeVector(0., 0., -(GetInst().GetInnergapThickness()/2)), // its position
+                        G4ThreeVector(0., 0., -(GetInst().GetInnergapThickness()/2)-GetInst().GetairgapThickness()/2), // its position
                         InnerabsorberLV, // its logical volume
                         "InnerAbso",    // its name
                         InnerlayerLV,   // its mother  volume
@@ -419,7 +420,7 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
         else{
                 new G4PVPlacement(
                         0,   // no rotation
-                        G4ThreeVector(0., 0., (GetInst().GetInnergapThickness()/2)), // its position
+                        G4ThreeVector(0., 0., (GetInst().GetInnergapThickness()/2)-GetInst().GetairgapThickness()/2), // its position
                         InnerabsorberLV, // its logical volume
                         "InnerAbso", // its name
                         InnerlayerLV, // its mother  volume
@@ -443,7 +444,7 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
         if(GetInst().GetInnerAbsFirst()) {
                 new G4PVPlacement(
                         0,         // no rotation
-                        G4ThreeVector(0., 0., GetInst().GetInnerabsoThickness()/2), // its position
+                        G4ThreeVector(0., 0., GetInst().GetInnerabsoThickness()/2-GetInst().GetairgapThickness()/2), // its position
                         InnergapLV,     // its logical volume
                         "InnerGap",     // its name
                         InnerlayerLV,   // its mother  volume
@@ -454,7 +455,7 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
         else{
                 new G4PVPlacement(
                         0,   // no rotation
-                        G4ThreeVector(0., 0., -GetInst().GetInnerabsoThickness()/2), // its position
+                        G4ThreeVector(0., 0., -GetInst().GetInnerabsoThickness()/2-GetInst().GetairgapThickness()/2), // its position
                         InnergapLV, // its logical volume
                         "InnerGap", // its name
                         InnerlayerLV, // its mother  volume
@@ -488,6 +489,16 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
 
 
 
+        new G4PVPlacement(
+                0,                                         // no rotation
+                G4ThreeVector(0., 0., (GetInst().GetInnerlayerThickness()/2)-GetInst().GetairgapThickness()/2),                                 // its position
+                AirGapLV,                                 // its logical volume
+                "OuterAirGap",                                    // its name
+                OuterlayerLV,                                   // its mother  volume
+                false,                                     // no boolean operation
+                0,                                         // copy number
+                fCheckOverlaps);                                 // checking overlaps
+
         //
         // OuterAbsorber
         //
@@ -505,7 +516,7 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
         if(GetInst().GetOuterAbsFirst()) {
                 new G4PVPlacement(
                         0,                         // no rotation
-                        G4ThreeVector(0., 0., -(GetInst().GetOutergapThickness()/2)),                 // its position
+                        G4ThreeVector(0., 0., -(GetInst().GetOutergapThickness()/2)-GetInst().GetairgapThickness()/2),                 // its position
                         OuterabsorberLV,                 // its logical volume
                         "Abso",                    // its name
                         OuterlayerLV,                   // its mother  volume
@@ -516,7 +527,7 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
         else{
                 new G4PVPlacement(
                         0,                   // no rotation
-                        G4ThreeVector(0., 0., (GetInst().GetOutergapThickness()/2)),                 // its position
+                        G4ThreeVector(0., 0., (GetInst().GetOutergapThickness()/2)-GetInst().GetairgapThickness()/2),                 // its position
                         OuterabsorberLV,                 // its logical volume
                         "OuterAbso",                 // its name
                         OuterlayerLV,                 // its mother  volume
@@ -542,7 +553,7 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
         if(GetInst().GetOuterAbsFirst()) {
                 new G4PVPlacement(
                         0,                         // no rotation
-                        G4ThreeVector(0., 0., GetInst().GetOuterabsoThickness()/2),                 // its position
+                        G4ThreeVector(0., 0., GetInst().GetOuterabsoThickness()/2-GetInst().GetairgapThickness()/2),                 // its position
                         OutergapLV,                     // its logical volume
                         "OuterGap",                     // its name
                         OuterlayerLV,                   // its mother  volume
@@ -553,7 +564,7 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
         else{
                 new G4PVPlacement(
                         0,                   // no rotation
-                        G4ThreeVector(0., 0., -GetInst().GetOuterabsoThickness()/2),                 // its position
+                        G4ThreeVector(0., 0., -GetInst().GetOuterabsoThickness()/2-GetInst().GetairgapThickness()/2),                 // its position
                         OutergapLV,                 // its logical volume
                         "OuterGap",                 // its name
                         OuterlayerLV,                 // its mother  volume

@@ -66,8 +66,8 @@ G4double GetPvesselThickness();
 void SetcalorSizeXY(G4double cs);
 G4double GetcalorSizeXY();
 
-//void SetairgapThickness(G4double at);
-//G4double GetairgapThickness();
+void SetairgapThickness(G4double at);
+G4double GetairgapThickness();
 
 void SetWorldMult(G4double wm);
 
@@ -127,7 +127,7 @@ G4double InnerlayerThickness;
 
 
 G4double calorSizeXY;
-//G4double airgapThickness;
+G4double airgapThickness;
 G4double DetectorThickness;
 
 G4double PvesselThickness;

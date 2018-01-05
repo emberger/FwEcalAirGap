@@ -40,7 +40,7 @@ B4ROOTEvent::B4ROOTEvent() {
 								m_OutertilesizeY= 0;
 								Outerabsofirst= true;
 
-								//m_airgapThickness=0;
+								m_airgapThickness=0;
 								m_calsizeXY= 0;
 }
 
@@ -61,7 +61,7 @@ B4ROOTEvent::B4ROOTEvent(const B4ROOTEvent& origEvent) : TObject(origEvent) {
 								Outerabsofirst=origEvent.Outerabsofirst;
 
 								m_calsizeXY=origEvent.m_calsizeXY;
-								//m_airgapThickness=origEvent.m_airgapThickness;
+								m_airgapThickness=origEvent.m_airgapThickness;
 
 								m_MomentumPh1=origEvent.m_MomentumPh1;
 								m_GunPos=origEvent.m_GunPos;
@@ -100,7 +100,7 @@ void B4ROOTEvent::Clear(const Option_t*) {
 								m_OutertilesizeX= 0;
 								m_OutertilesizeY= 0;
 								Outerabsofirst= true;
-								//m_airgapThickness=0.;
+								m_airgapThickness=0.;
 								m_calsizeXY= 0;
 }
 void B4ROOTEvent::Reset(Option_t * /*option*/)

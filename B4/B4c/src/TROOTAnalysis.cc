@@ -55,7 +55,7 @@ TROOTAnalysis::TROOTAnalysis(std::unique_ptr<TChain> &ch,Double_t prodist) :
 
         calsizeXY=Cevent->calsizeXY();
         PVesselThickness=Cevent->PVesselThickness();
-
+        airgapThickness=Cevent->airgapThickness();
 
         true_direction = Cevent->MomentumPh1();
         true_energy = Cevent->EnergyPrimary();
@@ -923,11 +923,11 @@ std::tuple<Double_t, Double_t, Double_t > TROOTAnalysis::TransformCoordinates(Do
 
                 }
 
-                //  std::cout<<"X: "<<offsetX<<"Y:"<<offsetY<<"Z: "<<offsetZ<<std::endl;
+                  //std::cout<<"X: "<<offsetX<<"Y:"<<offsetY<<"Z: "<<offsetZ<<std::endl;
 
                 coordinates.SetXYZ((offsetX + x * InnertiledimX),              // X
                                    (offsetY + y * InnertiledimY),                // Y
-                                   (offsetZ + z * (InnerAbsoThickness+InnerGapThickness)));     // Z
+                                   (offsetZ + z * (InnerAbsoThickness+InnerGapThickness+airgapThickness)));     // Z
         }
         else if(cp=="OuterGapLV") {
 
@@ -937,24 +937,25 @@ std::tuple<Double_t, Double_t, Double_t > TROOTAnalysis::TransformCoordinates(Do
                 Double_t offsetZ;
 
                 if(Outerabsofirst) {
-                        offsetZ=(InnerGapThickness+InnerAbsoThickness)*nofInnerLayers+ PVesselThickness + OuterAbsoThickness + OuterGapThickness/2;
+                        offsetZ=(InnerGapThickness+InnerAbsoThickness+airgapThickness)*nofInnerLayers+ PVesselThickness + OuterAbsoThickness + OuterGapThickness/2;
                         //std::cout<<"true"<<std::endl;
                 }
                 else{
-                        offsetZ=(InnerGapThickness+InnerAbsoThickness)*nofInnerLayers+PVesselThickness+OuterGapThickness/2;
+                        offsetZ=(InnerGapThickness+InnerAbsoThickness+airgapThickness)*nofInnerLayers+PVesselThickness+OuterGapThickness/2;
                         //  std::cout<<"false"<<std::endl;
 
                 }
 
-                //  std::cout<<"X: "<<offsetX<<"Y:"<<offsetY<<"Z: "<<offsetZ<<std::endl;
+                  //std::cout<<"X: "<<offsetX<<"Y:"<<offsetY<<"Z: "<<offsetZ<<std::endl;
 
                 coordinates.SetXYZ((offsetX + x * OutertiledimX),                        // X
                                    (offsetY + y * OutertiledimY),                          // Y
-                                   (offsetZ + z * (OuterAbsoThickness+OuterGapThickness)));             // Z
+                                   (offsetZ + z * (OuterAbsoThickness+OuterGapThickness+airgapThickness)));             // Z
 
         }
-        //std::cout<<"Hit is in "<<cp<<std::endl;
-        //coordinates.Print();
+        // std::cout<<"Hit is in "<<cp<<std::endl;
+        // std::cout<<"at X: "<<x<<"Y: "<<y<<"Z: "<<z<<std::endl;
+        // coordinates.Print();
 
         //rotate into correct segment
 

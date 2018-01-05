@@ -13,8 +13,8 @@ void DetParams::InitDet(){
 								nofOuterTilesX=calorSizeXY/OutertileLenX;
 								nofOuterTilesY=calorSizeXY/OutertileLenY;
 
-								InnerlayerThickness=InnerabsoThickness+InnergapThickness/*+airgapThickness*/;
-								OuterlayerThickness=OuterabsoThickness+OutergapThickness/*+airgapThickness*/;
+								InnerlayerThickness=InnerabsoThickness+InnergapThickness+airgapThickness;
+								OuterlayerThickness=OuterabsoThickness+OutergapThickness+airgapThickness;
 
 
 								InnercalorThickness=fNofInnerLayers*InnerlayerThickness;
@@ -184,13 +184,13 @@ G4double DetParams::GetcalorSizeXY(){
 								return calorSizeXY;
 }
 
-// void DetParams::SetairgapThickness(G4double at){
-// 	airgapThickness=at;
-// }
-//
-// G4double DetParams::GetairgapThickness(){
-// 	return airgapThickness;
-// }
+void DetParams::SetairgapThickness(G4double at){
+	airgapThickness=at;
+}
+
+G4double DetParams::GetairgapThickness(){
+	return airgapThickness;
+}
 
 void DetParams::SetWorldMult(G4double wm){
 								WorldMult=wm;

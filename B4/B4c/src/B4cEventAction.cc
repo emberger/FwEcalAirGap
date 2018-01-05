@@ -227,6 +227,7 @@ void B4cEventAction::EndOfEventAction(const G4Event* event)
 
         this->CalEvent()->SetcalsizeXY(GetInst().GetcalorSizeXY());
         this->CalEvent()->SetPVesselThickness(GetInst().GetPvesselThickness());
+        this->CalEvent()->SetairgapThickness(GetInst().GetairgapThickness());
 
         this->CalEvent()->SetEnergyPrimary(event->GetPrimaryVertex()->GetPrimary()->GetKineticEnergy());
 
