@@ -1,12 +1,12 @@
 {
-        TFile * f1= new TFile("~/Geant4/Data/ForwardEcalWithAirGap/AngularResolution_OutlierRejection/AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_14mmTitanVessel/EnergyResolution.root");
+        TFile * f1= new TFile("~/Geant4/Data/ForwardEcalWithAirGap/AngularResolution_OutlierRejection/AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_14mmTitanVessel/RejectionMethodAnalysis/ROOT/Res_PCA_68Quantil.root");
         TCanvas * c1=(TCanvas*)f1->Get("c2p");
-        TGraph * g1=(TGraph*)c1->GetListOfPrimitives()->At(1);
+        TGraph * g1=(TGraph*)c1->GetListOfPrimitives()->Last();
 
 
-        TFile * f2= new TFile("~/Geant4/Data/ForwardEcalWithPressureVessel/AngularResolution_OutlierRejection/AngReso_IT20_OT20_Ogapfirst_25Inner_50Outer_lead1mm_Polystyrene5mm_14mmTitanVessel/EnergyResolution.root");
+        TFile * f2= new TFile("~/Geant4/Data/ForwardEcalWithPressureVessel/AngularResolution_OutlierRejection/AngReso_IT20_OT20_Ogapfirst_25Inner_50Outer_lead1mm_Polystyrene5mm_14mmTitanVessel/RejectionMethodAnalysis/ROOT/Res_ODR_68Quantil.root");
         TCanvas * c2=(TCanvas*)f2->Get("c2p");
-        TGraph * g2=(TGraph*)c2->GetListOfPrimitives()->At(1);
+        TGraph * g2=(TGraph*)c2->GetListOfPrimitives()->Last();
 
         // TFile * f3= new TFile("~/Geant4/Data/ForwardEcalWithAirGap/AngularResolution_OutlierRejection/AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_20mmSteelVessel/EnergyResolution.root");
         // TCanvas * c3=(TCanvas*)f3->Get("c2p");
@@ -161,8 +161,8 @@
         // rat8->Draw("P");
         l1->Draw();
 
-        ratio1->Print("GeometryRating_EnergyResolution.pdf");
-        ratio1->Print("GeometryRating_EnergyResolution.C");
+        ratio1->Print("GeometryRating_AngularResolution.pdf");
+        ratio1->Print("GeometryRating_AngularResolution.C");
 
 
         g1->SetMarkerSize(1.2);
@@ -224,6 +224,6 @@
         // g8->Draw("P");
         l2->Draw();
 
-        comp1->Print("GeometryComparison_EnergyResolution.C");
-        comp1->Print("GeometryComparison_EnergyResolution.pdf");
+        comp1->Print("GeometryComparison_AngularResolution.C");
+        comp1->Print("GeometryComparison_AngularResolution.pdf");
 }
