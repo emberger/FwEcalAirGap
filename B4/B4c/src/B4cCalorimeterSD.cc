@@ -45,9 +45,11 @@
 B4cCalorimeterSD::B4cCalorimeterSD(const G4String& name,const G4String& hitsCollectionName)
         : G4VSensitiveDetector(name),
         fHitsCollection(nullptr),
-        ROHitID(0)
+        cellcounter(0),
+        hitcounter(0)
 {
         collectionName.insert(hitsCollectionName);
+
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -70,15 +72,10 @@ void B4cCalorimeterSD::Initialize(G4HCofThisEvent* hce)
                 = G4SDManager::GetSDMpointer()->GetCollectionID(collectionName[0]);
         hce->AddHitsCollection( hcID, fHitsCollection );
 
-        if(this->GetName()=="GapSD") {
+        // if(this->GetName()=="GapSD") {
+        //         fHitsCollection->insert(new B4cCalorHit());
+        // }
 
-
-
-
-
-                fHitsCollection->insert(new B4cCalorHit());
-
-        }
 
 }
 
@@ -99,7 +96,8 @@ G4bool B4cCalorimeterSD::ProcessHits(G4Step* step,
 
         // energy deposit
         auto edep = step->GetTotalEnergyDeposit();
-        eges+=edep;
+        G4cout<<MeV<<G4endl;
+        eges+=edep/MeV;
         // step length
         G4double stepLength = 0.;
         if ( step->GetTrack()->GetDefinition()->GetPDGCharge() != 0. ) {
@@ -107,7 +105,8 @@ G4bool B4cCalorimeterSD::ProcessHits(G4Step* step,
         }
 
         if ( edep==0. && stepLength == 0. ) return false;
-        fHitsCollection->insert(new B4cCalorHit());
+        hitcounter++;
+
 
         auto touchable = (step->GetPreStepPoint()->GetTouchable());
 
@@ -120,12 +119,8 @@ G4bool B4cCalorimeterSD::ProcessHits(G4Step* step,
         G4int Strip;
         G4int Layer;
 
-
-
-
-
         //Get copynumbers to specify cell
-        //
+
         Cell=ROhist->GetReplicaNumber();
         auto CellV=ROhist->GetVolume()->GetName();
 
@@ -134,21 +129,51 @@ G4bool B4cCalorimeterSD::ProcessHits(G4Step* step,
 
         Layer=ROhist->GetReplicaNumber(3);
         auto LayerV=ROhist->GetVolume(3)->GetName();
+
+
+        if(CalorPart=="InnerGapLV"){
+              HitID=Layer*GetInst().GetInnertilesPerLayer()+Strip*GetInst().GetnofInnerTilesX()+Cell;
+        }
+        else if(CalorPart=="OuterGapLV"){
+              HitID=GetInst().GetfNofInnerLayers()*GetInst().GetInnertilesPerLayer() + Layer*GetInst().GetInnertilesPerLayer() + Strip*GetInst().GetnofInnerTilesX() + Cell;
+        }
         //std::cout<<"Z:"<<Layer <<" Y: "<<Strip<<" X: "<<Cell<<std::endl;
 
+        B4cCalorHit * hit;
 
-        auto hit=(*fHitsCollection)[ROHitID];
-        if ( !hit ) {
-                G4ExceptionDescription msg;
-                msg << "Cannot access Gap hit " << layerNumber;
-                G4Exception("B4cCalorimeterSD::ProcessHits()",
-                            "MyCode0004", FatalException, msg);
+        it=cellmap.find(HitID);
+
+        if(it==cellmap.end()){
+          cellmap.insert(std::pair<G4int,G4int>(HitID,cellcounter));
+          fHitsCollection->insert(new B4cCalorHit());
+          //std::cout<<"HitInserted"<<std::endl;
+          hit=(*fHitsCollection)[cellcounter];
+
+          cellcounter++;
+
+        }
+        else if(it!=cellmap.end()){
+
+          hit=(*fHitsCollection)[it->second];
+
         }
 
 
-//        auto hitLayer = (*fHitsCollection)[ROLayerID];
-        // Get hit for total accounting
+        // if ( !hit ) {
+        //           fHitsCollection->insert(new B4cCalorHit());
+        //         // G4ExceptionDescription msg;
+        //         // msg << "Cannot access Gap hit " << layerNumber;
+        //         // G4Exception("B4cCalorimeterSD::ProcessHits()",
+        //         //             "MyCode0004", FatalException, msg);
+        //
+        //         std::cout<<"HitInserted"<<std::endl;
+        // }
+        // else if(hit){
+        //   std::cout<<"Hit exists"<<std::endl;
+        // }
 
+        //auto hitLayer = (*fHitsCollection)[ROLayerID];
+        // Get hit for total accounting
 
         // Add values to cell information
         hit->Add(edep, stepLength);
@@ -175,7 +200,6 @@ G4bool B4cCalorimeterSD::ProcessHits(G4Step* step,
         //Add energydepositon for total accounting
 
         //std::cout<<"HitID: "<<ROHitID<<std::endl;
-        ROHitID++;
 
         return true;
 }
@@ -184,6 +208,8 @@ G4bool B4cCalorimeterSD::ProcessHits(G4Step* step,
 
 void B4cCalorimeterSD::EndOfEvent(G4HCofThisEvent*)
 {
+        fHitsCollection->insert(new B4cCalorHit());
+
         auto hitTotal = (*fHitsCollection)[fHitsCollection->entries()-1];
         hitTotal->Add(eges, 1.);
         if(hitTotal->GetTouch()==false) {
@@ -200,8 +226,13 @@ void B4cCalorimeterSD::EndOfEvent(G4HCofThisEvent*)
                         << " hits in the tracker chambers: " << G4endl;
                 for ( G4int i=0; i<nofHits; i++ ) (*fHitsCollection)[i]->Print();
         }
-        ROHitID=0;
+        // std::cout<<"Run produced "<<hitcounter<<" Hits in "<<cellcounter<<" cells"<<std::endl;
+        // std::cout<<"Hitcollection has "<<fHitsCollection->entries()<<" entries"<<std::endl;
+        hitcounter=0;
+        cellcounter=0;
         eges=0;
+        cellmap.clear();
+
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

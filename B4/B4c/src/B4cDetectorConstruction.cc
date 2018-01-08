@@ -204,9 +204,13 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
 {
 
         auto defaultMaterial = G4Material::GetMaterial("Galactic");
+
         auto absorberMaterial = G4Material::GetMaterial("G4_Pb");
+
         auto gapMaterial = G4Material::GetMaterial("G4_POLYSTYRENE");
+
         auto airMaterial = G4Material::GetMaterial("G4_AIR");
+
         auto PVesselMaterial = G4Material::GetMaterial("Steel");
 
         if ( !defaultMaterial || !absorberMaterial || !gapMaterial ) {
@@ -488,6 +492,10 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
                 GetInst().GetOuterlayerThickness());   // witdth of replica
 
 
+
+                //
+                //OuterAirGap
+                //
 
         new G4PVPlacement(
                 0,                                         // no rotation

@@ -35,6 +35,8 @@
 
 #include "B4cCalorHit.hh"
 
+#include <map>
+#include <iterator>
 #include <vector>
 
 class G4Step;
@@ -62,8 +64,14 @@ virtual void   EndOfEvent(G4HCofThisEvent* hitCollection);
 
 private:
 B4cCalorHitsCollection* fHitsCollection;
-G4int ROHitID;
 G4double eges;
+
+G4int cellcounter;
+G4int hitcounter;
+G4int HitID;
+
+std::map<G4int, G4int> cellmap;
+std::map<G4int, G4int>::iterator it;
 
 };
 

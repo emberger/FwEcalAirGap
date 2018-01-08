@@ -306,6 +306,7 @@ G4VPhysicalVolume* MyRO::Build(){
 																kZAxis,                                        // axis of replication
 																GetInst().GetfNofOuterLayers(),                                     // number of replica
 																GetInst().GetOuterlayerThickness());                               // witdth of replica
+
 								//-------------------------------
 								//build Outer calorimeter readout cells
 								//-------------------------------

@@ -1,12 +1,14 @@
 {
-        TFile * f1= new TFile("~/Geant4/Data/ForwardEcalWithAirGap/AngularResolution_OutlierRejection/AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_14mmTitanVessel/RejectionMethodAnalysis/ROOT/Res_PCA_68Quantil.root");
+
+
+        TFile * f1= new TFile("~/Geant4/Data/ForwardEcalWithAirGap/AngularResolution_OutlierRejection/AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_20mmSteelVessel/EnergyResolution.root");
         TCanvas * c1=(TCanvas*)f1->Get("c2p");
-        TGraph * g1=(TGraph*)c1->GetListOfPrimitives()->Last();
+        TGraph * g1=(TGraph*)c1->GetListOfPrimitives()->At(1);
 
 
-        TFile * f2= new TFile("~/Geant4/Data/ForwardEcalWithPressureVessel/AngularResolution_OutlierRejection/AngReso_IT20_OT20_Ogapfirst_25Inner_50Outer_lead1mm_Polystyrene5mm_14mmTitanVessel/RejectionMethodAnalysis/ROOT/Res_ODR_68Quantil.root");
+        TFile * f2= new TFile("~/Geant4/Data/ForwardEcalWithAirGap/AngularResolution_OutlierRejection/AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_Air1mm_RangeCut_20mmSteelVessel/EnergyResolution.root");
         TCanvas * c2=(TCanvas*)f2->Get("c2p");
-        TGraph * g2=(TGraph*)c2->GetListOfPrimitives()->Last();
+        TGraph * g2=(TGraph*)c2->GetListOfPrimitives()->At(1);
 
         // TFile * f3= new TFile("~/Geant4/Data/ForwardEcalWithAirGap/AngularResolution_OutlierRejection/AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_20mmSteelVessel/EnergyResolution.root");
         // TCanvas * c3=(TCanvas*)f3->Get("c2p");
@@ -135,8 +137,8 @@
         // rat8->SetMarkerColor(kBlue);
 
         TLegend * l1= new TLegend(0.5,0.7,0.9,0.9);
-        l1->AddEntry(rat1, "30InnerLayers_14mmTitanVessel_1mmAirGap", "p");
-        l1->AddEntry(rat2, "25InnerLayers_14mmTitanVessel_NOAirGap", "p");
+        l1->AddEntry(rat1, "700umGeantRangeCut", "p");
+        l1->AddEntry(rat2, "50umGeantRangeCut", "p");
         // l1->AddEntry(rat3, "SteelVessel+smearing standard", "p");
         // l1->AddEntry(rat4, "SteelVessel NO smearing", "p");
         // //l1->AddEntry(rat5, "1mmLeadAbsorber_NOVessel_standard", "p");
@@ -148,7 +150,7 @@
         ratio1->cd(0);
         rat1->GetYaxis()->SetRangeUser(-0.5,0.8);
         rat1->GetXaxis()->SetTitle("Energy[MeV]");
-        rat1->GetYaxis()->SetTitle("#frac{AngularResolution}{StandardResolution}-1");
+        rat1->GetYaxis()->SetTitle("#frac{EnergyResolution}{StandardResolution}-1");
         rat1->GetYaxis()->SetTitleOffset(1.2);
 
         rat1->Draw("AP");
@@ -161,8 +163,8 @@
         // rat8->Draw("P");
         l1->Draw();
 
-        ratio1->Print("GeometryRating_AngularResolution.pdf");
-        ratio1->Print("GeometryRating_AngularResolution.C");
+        ratio1->Print("EnergyResolution_Rating_700um_vs_50um.pdf");
+        ratio1->Print("EnergyResolution_Rating_700um_vs_50um.C");
 
 
         g1->SetMarkerSize(1.2);
@@ -198,8 +200,8 @@
         // g8->SetMarkerColor(kBlue);
 
         TLegend * l2= new TLegend(0.5,0.7,0.9,0.9);
-        l2->AddEntry(rat1, "30InnerLayers_14mmTitanVessel_1mmAirGap", "p");
-        l2->AddEntry(rat2, "25InnerLayers_14mmTitanVessel_NOAirGap", "p");
+        l2->AddEntry(rat1, "700umGeantRangeCut", "p");
+        l2->AddEntry(rat2, "50umGeantRangeCut", "p");
         // l2->AddEntry(rat3, "SteelVessel+smearing", "p");
         // l2->AddEntry(rat4, "SteelVessel NO smearing", "p");
         // l2->AddEntry(g3, "40innerLayers_1mmLeadAbsorber_20mmSteelVessel", "p");
@@ -224,6 +226,6 @@
         // g8->Draw("P");
         l2->Draw();
 
-        comp1->Print("GeometryComparison_AngularResolution.C");
-        comp1->Print("GeometryComparison_AngularResolution.pdf");
+        comp1->Print("EnergyResolution_700um_vs_50um.C");
+        comp1->Print("EnergyResolution_700um_vs_50um.pdf");
 }
