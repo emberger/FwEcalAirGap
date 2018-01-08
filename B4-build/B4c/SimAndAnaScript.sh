@@ -149,4 +149,4 @@ done
 
  ./AngularResolution $FILES/RejectionMethodAnalysis/ROOT Res
  ./PlotQuantiles $FILES/RejectionMethodAnalysis/ROOT Res
- ./EResAndShowerprofile 0.0 $FILES
+ ./EResAndShowerprofile 0.15 $FILES
