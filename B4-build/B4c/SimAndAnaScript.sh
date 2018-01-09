@@ -21,7 +21,7 @@ XAngIncrement=0.
 AngIiterations=1
 
 
-foldername=AngReso_IT20_OT20_Ogapfirst_30Inner_50Outer_lead1mm_Polystyrene5mm_Air1mm_RangeCut_Cellwise_20mmSteelVessel_MuonTest #folder containing .root files
+foldername=AngReso_IT20_OT20_30Inner_50Outer_lead1mm_Polystyrene5mm_Air1mm_RangeCut_1X0LeadVessel #folder containing .root files
 
  mkdir ~/Geant4/Data/ForwardEcalWithAirGap/AngularResolution_OutlierRejection/$foldername
 
@@ -125,28 +125,28 @@ done
 
  FILES=/home/iwsatlas1/emberger/Geant4/Data/ForwardEcalWithAirGap/AngularResolution_OutlierRejection/$foldername
  ANALYSIS=$FILES/RejectionMethodAnalysis
-
- mkdir $ANALYSIS
-
- mkdir $ANALYSIS/ROOT
- mkdir $ANALYSIS/C
- mkdir $ANALYSIS/PDF
-
- counter=0
- for f in $FILES/*.root
- do
-     #echo "$f"
-     FilePath=$f
-     filename="${FilePath##*/}"
-
-     foldername=${filename%_*}
-
-     # mkdir $AnaPath
-
-     ./Analysis 0.15 1000 $FilePath $ANALYSIS
-
- done
-
- ./AngularResolution $FILES/RejectionMethodAnalysis/ROOT Res
- ./PlotQuantiles $FILES/RejectionMethodAnalysis/ROOT Res
- ./EResAndShowerprofile 0.15 $FILES
+ #
+ # mkdir $ANALYSIS
+ #
+ # mkdir $ANALYSIS/ROOT
+ # mkdir $ANALYSIS/C
+ # mkdir $ANALYSIS/PDF
+ #
+ # counter=0
+ # for f in $FILES/*.root
+ # do
+ #     #echo "$f"
+ #     FilePath=$f
+ #     filename="${FilePath##*/}"
+ #
+ #     foldername=${filename%_*}
+ #
+ #     # mkdir $AnaPath
+ #
+ #     ./Analysis 0.15 1000 $FilePath $ANALYSIS
+ #
+ # done
+ #
+ # ./AngularResolution $FILES/RejectionMethodAnalysis/ROOT Res
+ # ./PlotQuantiles $FILES/RejectionMethodAnalysis/ROOT Res
+ ./EResAndShowerprofile 0.0 $FILES

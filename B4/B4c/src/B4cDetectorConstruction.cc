@@ -205,13 +205,13 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
 
         auto defaultMaterial = G4Material::GetMaterial("Galactic");
 
-        auto absorberMaterial = G4Material::GetMaterial("G4_Pb");
+        auto absorberMaterial = G4Material::GetMaterial("G4_AIR");
 
         auto gapMaterial = G4Material::GetMaterial("G4_POLYSTYRENE");
 
         auto airMaterial = G4Material::GetMaterial("G4_AIR");
 
-        auto PVesselMaterial = G4Material::GetMaterial("Steel");
+        auto PVesselMaterial = G4Material::GetMaterial("G4_AIR");
 
         if ( !defaultMaterial || !absorberMaterial || !gapMaterial ) {
                 G4ExceptionDescription msg;
@@ -353,234 +353,234 @@ G4VPhysicalVolume* B4cDetectorConstruction::DefineVolumes()
         // InnerLayer
         //
 
-        auto InnerlayerS
-                = new G4Box("InnerLayer", // its name
-                            GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetInnerlayerThickness()/2); //its size
-
-        auto InnerlayerLV
-                = new G4LogicalVolume(
-                InnerlayerS,            // its solid
-                defaultMaterial,   // its material
-                "InnerLayer");          // its name
-
-        new G4PVReplica(
-                "InnerLayer",           // its name
-                InnerlayerLV,           // its logical volume
-                calorInsideLV,           // its mother
-                kZAxis,            // axis of replication
-                GetInst().GetfNofInnerLayers(),         // number of replica
-                GetInst().GetInnerlayerThickness());   // witdth of replica
-
+        // auto InnerlayerS
+        //         = new G4Box("InnerLayer", // its name
+        //                     GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetInnerlayerThickness()/2); //its size
         //
-        //AirGap
+        // auto InnerlayerLV
+        //         = new G4LogicalVolume(
+        //         InnerlayerS,            // its solid
+        //         defaultMaterial,   // its material
+        //         "InnerLayer");          // its name
         //
-
-        auto AirGapS
-                = new G4Box("AirGap",         // its name
-                            GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetairgapThickness()/2);         // its size
-
-        auto AirGapLV
-                = new G4LogicalVolume(
-                AirGapS,                 // its solid
-                airMaterial,         // its material
-                "AirGapLV");                 // its name
-
-
-        new G4PVPlacement(
-                0,                         // no rotation
-                G4ThreeVector(0., 0., (GetInst().GetInnerlayerThickness()/2)-GetInst().GetairgapThickness()/2),                 // its position
-                AirGapLV,                 // its logical volume
-                "InnerAirGap",                    // its name
-                InnerlayerLV,                   // its mother  volume
-                false,                     // no boolean operation
-                0,                         // copy number
-                fCheckOverlaps);                 // checking overlaps
-
-
+        // new G4PVReplica(
+        //         "InnerLayer",           // its name
+        //         InnerlayerLV,           // its logical volume
+        //         calorInsideLV,           // its mother
+        //         kZAxis,            // axis of replication
+        //         GetInst().GetfNofInnerLayers(),         // number of replica
+        //         GetInst().GetInnerlayerThickness());   // witdth of replica
         //
-        // InnerAbsorber
+        // //
+        // //AirGap
+        // //
         //
-        auto InnerabsorberS
-                = new G4Box("InnerAbso", // its name
-                            GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetInnerabsoThickness()/2); // its size
-
-        auto InnerabsorberLV
-                = new G4LogicalVolume(
-                InnerabsorberS,         // its solid
-                absorberMaterial,  // its material
-                "InnerAbsoLV");         // its name
-
-        if(GetInst().GetInnerAbsFirst()) {
-                new G4PVPlacement(
-                        0,         // no rotation
-                        G4ThreeVector(0., 0., -(GetInst().GetInnergapThickness()/2)-GetInst().GetairgapThickness()/2), // its position
-                        InnerabsorberLV, // its logical volume
-                        "InnerAbso",    // its name
-                        InnerlayerLV,   // its mother  volume
-                        false,     // no boolean operation
-                        0,         // copy number
-                        fCheckOverlaps); // checking overlaps
-        }
-        else{
-                new G4PVPlacement(
-                        0,   // no rotation
-                        G4ThreeVector(0., 0., (GetInst().GetInnergapThickness()/2)-GetInst().GetairgapThickness()/2), // its position
-                        InnerabsorberLV, // its logical volume
-                        "InnerAbso", // its name
-                        InnerlayerLV, // its mother  volume
-                        false, // no boolean operation
-                        0,   // copy number
-                        fCheckOverlaps); // checking overlaps
-        }
+        // auto AirGapS
+        //         = new G4Box("AirGap",         // its name
+        //                     GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetairgapThickness()/2);         // its size
         //
-        // InnerGap
+        // auto AirGapLV
+        //         = new G4LogicalVolume(
+        //         AirGapS,                 // its solid
+        //         airMaterial,         // its material
+        //         "AirGapLV");                 // its name
         //
-        auto InnergapS
-                = new G4Box("InnerGap", // its name
-                            GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetInnergapThickness()/2); // its size
-
-        auto InnergapLV
-                = new G4LogicalVolume(
-                InnergapS,              // its solid
-                gapMaterial,       // its material
-                "InnerGapLV");          // its name
-
-        if(GetInst().GetInnerAbsFirst()) {
-                new G4PVPlacement(
-                        0,         // no rotation
-                        G4ThreeVector(0., 0., GetInst().GetInnerabsoThickness()/2-GetInst().GetairgapThickness()/2), // its position
-                        InnergapLV,     // its logical volume
-                        "InnerGap",     // its name
-                        InnerlayerLV,   // its mother  volume
-                        false,     // no boolean operation
-                        0,         // copy number
-                        fCheckOverlaps); // checking overlaps
-        }
-        else{
-                new G4PVPlacement(
-                        0,   // no rotation
-                        G4ThreeVector(0., 0., -GetInst().GetInnerabsoThickness()/2-GetInst().GetairgapThickness()/2), // its position
-                        InnergapLV, // its logical volume
-                        "InnerGap", // its name
-                        InnerlayerLV, // its mother  volume
-                        false, // no boolean operation
-                        0,   // copy number
-                        fCheckOverlaps); // checking overlaps
-
-        }
-
         //
-        // OuterLayer
+        // new G4PVPlacement(
+        //         0,                         // no rotation
+        //         G4ThreeVector(0., 0., (GetInst().GetInnerlayerThickness()/2)-GetInst().GetairgapThickness()/2),                 // its position
+        //         AirGapLV,                 // its logical volume
+        //         "InnerAirGap",                    // its name
+        //         InnerlayerLV,                   // its mother  volume
+        //         false,                     // no boolean operation
+        //         0,                         // copy number
+        //         fCheckOverlaps);                 // checking overlaps
         //
-
-        auto OuterlayerS
-                = new G4Box("OuterLayer", // its name
-                            GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetOuterlayerThickness()/2); //its size
-
-        auto OuterlayerLV
-                = new G4LogicalVolume(
-                OuterlayerS,            // its solid
-                defaultMaterial,   // its material
-                "OuterLayer");          // its name
-
-        new G4PVReplica(
-                "OuterLayer",           // its name
-                OuterlayerLV,           // its logical volume
-                calorOutsideLV,           // its mother
-                kZAxis,            // axis of replication
-                GetInst().GetfNofOuterLayers(),         // number of replica
-                GetInst().GetOuterlayerThickness());   // witdth of replica
-
-
-
-                //
-                //OuterAirGap
-                //
-
-        new G4PVPlacement(
-                0,                                         // no rotation
-                G4ThreeVector(0., 0., (GetInst().GetInnerlayerThickness()/2)-GetInst().GetairgapThickness()/2),                                 // its position
-                AirGapLV,                                 // its logical volume
-                "OuterAirGap",                                    // its name
-                OuterlayerLV,                                   // its mother  volume
-                false,                                     // no boolean operation
-                0,                                         // copy number
-                fCheckOverlaps);                                 // checking overlaps
-
         //
-        // OuterAbsorber
+        // //
+        // // InnerAbsorber
+        // //
+        // auto InnerabsorberS
+        //         = new G4Box("InnerAbso", // its name
+        //                     GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetInnerabsoThickness()/2); // its size
         //
-
-        auto OuterabsorberS
-                = new G4Box("OuterAbso",                 // its name
-                            GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetOuterabsoThickness()/2);                 // its size
-
-        auto OuterabsorberLV
-                = new G4LogicalVolume(
-                OuterabsorberS,                         // its solid
-                absorberMaterial,                  // its material
-                "OuterAbsoLV");                         // its name
-
-        if(GetInst().GetOuterAbsFirst()) {
-                new G4PVPlacement(
-                        0,                         // no rotation
-                        G4ThreeVector(0., 0., -(GetInst().GetOutergapThickness()/2)-GetInst().GetairgapThickness()/2),                 // its position
-                        OuterabsorberLV,                 // its logical volume
-                        "Abso",                    // its name
-                        OuterlayerLV,                   // its mother  volume
-                        false,                     // no boolean operation
-                        0,                         // copy number
-                        fCheckOverlaps);                 // checking overlaps
-        }
-        else{
-                new G4PVPlacement(
-                        0,                   // no rotation
-                        G4ThreeVector(0., 0., (GetInst().GetOutergapThickness()/2)-GetInst().GetairgapThickness()/2),                 // its position
-                        OuterabsorberLV,                 // its logical volume
-                        "OuterAbso",                 // its name
-                        OuterlayerLV,                 // its mother  volume
-                        false,                 // no boolean operation
-                        0,                   // copy number
-                        fCheckOverlaps);                 // checking overlaps
-        }
-
+        // auto InnerabsorberLV
+        //         = new G4LogicalVolume(
+        //         InnerabsorberS,         // its solid
+        //         absorberMaterial,  // its material
+        //         "InnerAbsoLV");         // its name
         //
-        // OuterGap
+        // if(GetInst().GetInnerAbsFirst()) {
+        //         new G4PVPlacement(
+        //                 0,         // no rotation
+        //                 G4ThreeVector(0., 0., -(GetInst().GetInnergapThickness()/2)-GetInst().GetairgapThickness()/2), // its position
+        //                 InnerabsorberLV, // its logical volume
+        //                 "InnerAbso",    // its name
+        //                 InnerlayerLV,   // its mother  volume
+        //                 false,     // no boolean operation
+        //                 0,         // copy number
+        //                 fCheckOverlaps); // checking overlaps
+        // }
+        // else{
+        //         new G4PVPlacement(
+        //                 0,   // no rotation
+        //                 G4ThreeVector(0., 0., (GetInst().GetInnergapThickness()/2)-GetInst().GetairgapThickness()/2), // its position
+        //                 InnerabsorberLV, // its logical volume
+        //                 "InnerAbso", // its name
+        //                 InnerlayerLV, // its mother  volume
+        //                 false, // no boolean operation
+        //                 0,   // copy number
+        //                 fCheckOverlaps); // checking overlaps
+        // }
+        // //
+        // // InnerGap
+        // //
+        // auto InnergapS
+        //         = new G4Box("InnerGap", // its name
+        //                     GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetInnergapThickness()/2); // its size
         //
-
-        auto OutergapS
-                = new G4Box("OuterGap",                 // its name
-                            GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetOutergapThickness()/2);                 // its size
-
-        auto OutergapLV
-                = new G4LogicalVolume(
-                OutergapS,                              // its solid
-                gapMaterial,                       // its material
-                "OuterGapLV");                          // its name
-
-        if(GetInst().GetOuterAbsFirst()) {
-                new G4PVPlacement(
-                        0,                         // no rotation
-                        G4ThreeVector(0., 0., GetInst().GetOuterabsoThickness()/2-GetInst().GetairgapThickness()/2),                 // its position
-                        OutergapLV,                     // its logical volume
-                        "OuterGap",                     // its name
-                        OuterlayerLV,                   // its mother  volume
-                        false,                     // no boolean operation
-                        0,                         // copy number
-                        fCheckOverlaps);                 // checking overlaps
-        }
-        else{
-                new G4PVPlacement(
-                        0,                   // no rotation
-                        G4ThreeVector(0., 0., -GetInst().GetOuterabsoThickness()/2-GetInst().GetairgapThickness()/2),                 // its position
-                        OutergapLV,                 // its logical volume
-                        "OuterGap",                 // its name
-                        OuterlayerLV,                 // its mother  volume
-                        false,                 // no boolean operation
-                        0,                   // copy number
-                        fCheckOverlaps);                 // checking overlaps
-
-        }
+        // auto InnergapLV
+        //         = new G4LogicalVolume(
+        //         InnergapS,              // its solid
+        //         gapMaterial,       // its material
+        //         "InnerGapLV");          // its name
+        //
+        // if(GetInst().GetInnerAbsFirst()) {
+        //         new G4PVPlacement(
+        //                 0,         // no rotation
+        //                 G4ThreeVector(0., 0., GetInst().GetInnerabsoThickness()/2-GetInst().GetairgapThickness()/2), // its position
+        //                 InnergapLV,     // its logical volume
+        //                 "InnerGap",     // its name
+        //                 InnerlayerLV,   // its mother  volume
+        //                 false,     // no boolean operation
+        //                 0,         // copy number
+        //                 fCheckOverlaps); // checking overlaps
+        // }
+        // else{
+        //         new G4PVPlacement(
+        //                 0,   // no rotation
+        //                 G4ThreeVector(0., 0., -GetInst().GetInnerabsoThickness()/2-GetInst().GetairgapThickness()/2), // its position
+        //                 InnergapLV, // its logical volume
+        //                 "InnerGap", // its name
+        //                 InnerlayerLV, // its mother  volume
+        //                 false, // no boolean operation
+        //                 0,   // copy number
+        //                 fCheckOverlaps); // checking overlaps
+        //
+        // }
+        //
+        // //
+        // // OuterLayer
+        // //
+        //
+        // auto OuterlayerS
+        //         = new G4Box("OuterLayer", // its name
+        //                     GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetOuterlayerThickness()/2); //its size
+        //
+        // auto OuterlayerLV
+        //         = new G4LogicalVolume(
+        //         OuterlayerS,            // its solid
+        //         defaultMaterial,   // its material
+        //         "OuterLayer");          // its name
+        //
+        // new G4PVReplica(
+        //         "OuterLayer",           // its name
+        //         OuterlayerLV,           // its logical volume
+        //         calorOutsideLV,           // its mother
+        //         kZAxis,            // axis of replication
+        //         GetInst().GetfNofOuterLayers(),         // number of replica
+        //         GetInst().GetOuterlayerThickness());   // witdth of replica
+        //
+        //
+        //
+        //         //
+        //         //OuterAirGap
+        //         //
+        //
+        // new G4PVPlacement(
+        //         0,                                         // no rotation
+        //         G4ThreeVector(0., 0., (GetInst().GetInnerlayerThickness()/2)-GetInst().GetairgapThickness()/2),                                 // its position
+        //         AirGapLV,                                 // its logical volume
+        //         "OuterAirGap",                                    // its name
+        //         OuterlayerLV,                                   // its mother  volume
+        //         false,                                     // no boolean operation
+        //         0,                                         // copy number
+        //         fCheckOverlaps);                                 // checking overlaps
+        //
+        // //
+        // // OuterAbsorber
+        // //
+        //
+        // auto OuterabsorberS
+        //         = new G4Box("OuterAbso",                 // its name
+        //                     GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetOuterabsoThickness()/2);                 // its size
+        //
+        // auto OuterabsorberLV
+        //         = new G4LogicalVolume(
+        //         OuterabsorberS,                         // its solid
+        //         absorberMaterial,                  // its material
+        //         "OuterAbsoLV");                         // its name
+        //
+        // if(GetInst().GetOuterAbsFirst()) {
+        //         new G4PVPlacement(
+        //                 0,                         // no rotation
+        //                 G4ThreeVector(0., 0., -(GetInst().GetOutergapThickness()/2)-GetInst().GetairgapThickness()/2),                 // its position
+        //                 OuterabsorberLV,                 // its logical volume
+        //                 "Abso",                    // its name
+        //                 OuterlayerLV,                   // its mother  volume
+        //                 false,                     // no boolean operation
+        //                 0,                         // copy number
+        //                 fCheckOverlaps);                 // checking overlaps
+        // }
+        // else{
+        //         new G4PVPlacement(
+        //                 0,                   // no rotation
+        //                 G4ThreeVector(0., 0., (GetInst().GetOutergapThickness()/2)-GetInst().GetairgapThickness()/2),                 // its position
+        //                 OuterabsorberLV,                 // its logical volume
+        //                 "OuterAbso",                 // its name
+        //                 OuterlayerLV,                 // its mother  volume
+        //                 false,                 // no boolean operation
+        //                 0,                   // copy number
+        //                 fCheckOverlaps);                 // checking overlaps
+        // }
+        //
+        // //
+        // // OuterGap
+        // //
+        //
+        // auto OutergapS
+        //         = new G4Box("OuterGap",                 // its name
+        //                     GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetOutergapThickness()/2);                 // its size
+        //
+        // auto OutergapLV
+        //         = new G4LogicalVolume(
+        //         OutergapS,                              // its solid
+        //         gapMaterial,                       // its material
+        //         "OuterGapLV");                          // its name
+        //
+        // if(GetInst().GetOuterAbsFirst()) {
+        //         new G4PVPlacement(
+        //                 0,                         // no rotation
+        //                 G4ThreeVector(0., 0., GetInst().GetOuterabsoThickness()/2-GetInst().GetairgapThickness()/2),                 // its position
+        //                 OutergapLV,                     // its logical volume
+        //                 "OuterGap",                     // its name
+        //                 OuterlayerLV,                   // its mother  volume
+        //                 false,                     // no boolean operation
+        //                 0,                         // copy number
+        //                 fCheckOverlaps);                 // checking overlaps
+        // }
+        // else{
+        //         new G4PVPlacement(
+        //                 0,                   // no rotation
+        //                 G4ThreeVector(0., 0., -GetInst().GetOuterabsoThickness()/2-GetInst().GetairgapThickness()/2),                 // its position
+        //                 OutergapLV,                 // its logical volume
+        //                 "OuterGap",                 // its name
+        //                 OuterlayerLV,                 // its mother  volume
+        //                 false,                 // no boolean operation
+        //                 0,                   // copy number
+        //                 fCheckOverlaps);                 // checking overlaps
+        //
+        // }
 
 
 
@@ -626,15 +626,15 @@ void B4cDetectorConstruction::ConstructSDandField()
 //  G4SDManager::GetSDMpointer()->AddNewDetector(absoSD);
 //  SetSensitiveDetector("AbsoLV",absoSD);
 
-        auto gapSD
-                = new B4cCalorimeterSD("GapSD", "GapHitsCollection");
-
-        G4SDManager::GetSDMpointer()->AddNewDetector(gapSD);
-
-        SetSensitiveDetector("InnerGapLV",gapSD);
-        SetSensitiveDetector("OuterGapLV",gapSD);
-
-        gapSD->SetROgeometry(ROGeom);
+        // auto gapSD
+        //         = new B4cCalorimeterSD("GapSD", "GapHitsCollection");
+        //
+        // G4SDManager::GetSDMpointer()->AddNewDetector(gapSD);
+        //
+        // SetSensitiveDetector("InnerGapLV",gapSD);
+        // SetSensitiveDetector("OuterGapLV",gapSD);
+        //
+        // gapSD->SetROgeometry(ROGeom);
 
         //G4cout<<ROGeom->GetName()<<G4endl;
 

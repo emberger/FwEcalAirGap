@@ -96,7 +96,7 @@ G4bool B4cCalorimeterSD::ProcessHits(G4Step* step,
 
         // energy deposit
         auto edep = step->GetTotalEnergyDeposit();
-        G4cout<<MeV<<G4endl;
+      //  G4cout<<MeV<<G4endl;
         eges+=edep/MeV;
         // step length
         G4double stepLength = 0.;
@@ -107,13 +107,15 @@ G4bool B4cCalorimeterSD::ProcessHits(G4Step* step,
         if ( edep==0. && stepLength == 0. ) return false;
         hitcounter++;
 
-
+        // std::cout<<step->GetPreStepPoint()->GetMaterial()->GetName()<<std::endl;
         auto touchable = (step->GetPreStepPoint()->GetTouchable());
 
         // Get calorimeter cell id
         auto layerNumber = touchable->GetReplicaNumber(1);
 
         std::string CalorPart=touchable->GetVolume()->GetLogicalVolume()->GetName();
+
+
         //std::cout<<CalorPart<<std::endl;
         G4int Cell;
         G4int Strip;
@@ -130,12 +132,23 @@ G4bool B4cCalorimeterSD::ProcessHits(G4Step* step,
         Layer=ROhist->GetReplicaNumber(3);
         auto LayerV=ROhist->GetVolume(3)->GetName();
 
+        G4ThreeVector RO = ROhist->GetTranslation();
+        G4ThreeVector st = touchable->GetTranslation();
+        std::cout<<"RO: "<<RO.x()<<":"<<RO.y()<<":"<<RO.z()<<std::endl;
+        std::cout<<"st: "<<st.x()<<":"<<st.y()<<":"<<st.z()<<std::endl;
+
+        //std::cout<<ROhist->GetVolume()->GetLogicalVolume()->GetMaterial()->GetName()<<std::endl;
 
         if(CalorPart=="InnerGapLV"){
               HitID=Layer*GetInst().GetInnertilesPerLayer()+Strip*GetInst().GetnofInnerTilesX()+Cell;
         }
         else if(CalorPart=="OuterGapLV"){
               HitID=GetInst().GetfNofInnerLayers()*GetInst().GetInnertilesPerLayer() + Layer*GetInst().GetInnertilesPerLayer() + Strip*GetInst().GetnofInnerTilesX() + Cell;
+        }
+        else{
+
+          std::cout<<"leck mich am oasch"<<std::endl;
+          return false;
         }
         //std::cout<<"Z:"<<Layer <<" Y: "<<Strip<<" X: "<<Cell<<std::endl;
 
@@ -157,7 +170,6 @@ G4bool B4cCalorimeterSD::ProcessHits(G4Step* step,
           hit=(*fHitsCollection)[it->second];
 
         }
-
 
         // if ( !hit ) {
         //           fHitsCollection->insert(new B4cCalorHit());

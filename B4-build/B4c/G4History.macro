@@ -52,5 +52,12 @@
 /gui/addButton viewer "Flush viewer (= refresh + update)" "/vis/viewer/flush"
 /gui/addButton viewer "Update scene" "/vis/scene/notifyHandlers"
 /run/printProgress 100
-/vis/viewer/set/picking false
+/vis/geometry/restore OuterCellLV
+/vis/viewer/rebuild
 /vis/viewer/refresh
+/vis/geometry/set/visibility OuterCellLV 1 1
+/vis/scene/notifyHandlers
+/vis/set/touchable World 0 Detector 1
+/vis/viewer/select viewer-0 (OpenGLStoredQt)
+/vis/geometry/set/visibility OuterCellLV 1 1
+/vis/scene/notifyHandlers

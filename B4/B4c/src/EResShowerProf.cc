@@ -40,7 +40,7 @@ void EResShowerProf::EResAndProfile(Double_t cut, std::string pth){
 
 
                 std::unique_ptr<TCanvas> profileC(new TCanvas("profileC", "profileC"));
-                std::unique_ptr<TH1D> profile(new TH1D("showerprofile", "showerprofile",100, 0, 100));
+                std::unique_ptr<TH1D> profile(new TH1D("showerprofile", "showerprofile",100, -0.5, 99.5));
 
                 std::unique_ptr<TH1D> edepdistribution(new TH1D("edep","edep",100,0,Estart));
 
@@ -119,7 +119,7 @@ void EResShowerProf::EResAndProfile(Double_t cut, std::string pth){
                 eres[i]=(edepdistribution->GetRMS(1)/edepdistribution->GetMean());
 
                 EcalTree->GetEntry(0);
-                std::unique_ptr<TLine> line_x(new TLine(Cevent->NumberOfInnerLayers()-1,0,Cevent->NumberOfInnerLayers()-1,profile->GetMaximum()));
+                std::unique_ptr<TLine> line_x(new TLine(Cevent->NumberOfInnerLayers()-0.5,0,Cevent->NumberOfInnerLayers()-0.5,profile->GetMaximum()));
 
                 profileC->cd(0);
                 profile->Draw();
@@ -150,7 +150,7 @@ void EResShowerProf::EResAndProfile(Double_t cut, std::string pth){
         EcalTree->SetBranchAddress("EventBranch", &Cevent);
 
         std::unique_ptr<TCanvas> profileC(new TCanvas("profileC", "profileC"));
-        std::unique_ptr<TH1D> profile(new TH1D("showerprofile", "showerprofile",100, 0, 100));
+        std::unique_ptr<TH1D> profile(new TH1D("showerprofile", "showerprofile",100, -0.5,99.5));
 
         std::unique_ptr<TH1D> edepdistribution(new TH1D("edep","edep",100,0,Estart));
 
@@ -232,7 +232,7 @@ void EResShowerProf::EResAndProfile(Double_t cut, std::string pth){
         eres[10]=(edepdistribution->GetRMS(1)/edepdistribution->GetMean());
 
         EcalTree->GetEntry(0);
-        std::unique_ptr<TLine> line_x(new TLine(Cevent->NumberOfInnerLayers()-1,0,Cevent->NumberOfInnerLayers()-1,profile->GetMaximum()));
+        std::unique_ptr<TLine> line_x(new TLine(Cevent->NumberOfInnerLayers()-0.5,0,Cevent->NumberOfInnerLayers()-0.5,profile->GetMaximum()));
 
         profileC->cd(0);
         profile->Draw();

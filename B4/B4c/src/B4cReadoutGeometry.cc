@@ -57,12 +57,12 @@ G4VPhysicalVolume* MyRO::Build(){
 								GetInst().SetOuterabsoThickness(1); // in mm
 								GetInst().SetOutergapThickness(5); // in mm
 
-								GetInst().SetPvesselThickness(20); //in mm
+								GetInst().SetPvesselThickness(7.7); //in mm
 
 								GetInst().SetairgapThickness(1); //in mm
 
 								GetInst().SetInnerAbsFirst(true);    // true if structure should be |Abso-Gap|Abso-Gap|... false if structure should be |Gap-Abso|Gap-Abso|...
-								GetInst().SetOuterAbsFirst(false);
+								GetInst().SetOuterAbsFirst(true);
 
 								GetInst().SetWorldMult(10.);
 								GetInst().InitDet(); // dont forget!!!
@@ -272,7 +272,7 @@ G4VPhysicalVolume* MyRO::Build(){
 								auto InnerCellLV
 																=new G4LogicalVolume(InnerCellS,
 																																					dummyMat,
-																																					"InnerCell");
+																																					"InnerCellLV");
 
 								new G4PVReplica("InnerCell",
 																								InnerCellLV, //logical volume
@@ -313,18 +313,18 @@ G4VPhysicalVolume* MyRO::Build(){
 
 								//build Gap
 								auto OuterGapS
-																=new G4Box("OuterGap", GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetOutergapThickness()/2);
+																=new G4Box("ROOuterGap", GetInst().GetcalorSizeXY()/2, GetInst().GetcalorSizeXY()/2, GetInst().GetOutergapThickness()/2);
 
 								auto OuterGapLV
 																=new G4LogicalVolume(OuterGapS,
 																																					dummyMat,
-																																					"OuterGap");
+																																					"ROOuterGap");
 								if(GetInst().GetOuterAbsFirst()) {
 
 																new G4PVPlacement(0,
 																																		G4ThreeVector(0., 0., GetInst().GetOuterabsoThickness()/2 -GetInst().GetairgapThickness()/2),
 																																		OuterGapLV,
-																																		"Gap",
+																																		"PVOuterGap",
 																																		ROOuterlayerLV,
 																																		false,
 																																		0,
@@ -336,7 +336,7 @@ G4VPhysicalVolume* MyRO::Build(){
 																new G4PVPlacement(0,
 																																		G4ThreeVector(0., 0., -GetInst().GetOuterabsoThickness()/2 -GetInst().GetairgapThickness()/2),
 																																		OuterGapLV,
-																																		"OuterGap",
+																																		"PVOuterGap",
 																																		ROOuterlayerLV,
 																																		false,
 																																		0,
@@ -369,7 +369,7 @@ G4VPhysicalVolume* MyRO::Build(){
 								auto OuterCellLV
 																=new G4LogicalVolume(OuterCellS,
 																																					dummyMat,
-																																					"OuterCell");
+																																					"OuterCellLV");
 
 								new G4PVReplica("OuterCell",
 																								OuterCellLV,                 //logical volume
